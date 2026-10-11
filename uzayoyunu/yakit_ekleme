@@ -1,0 +1,6 @@
+def yakit_ekle(miktar: int, depo: list = None) -> list:
+  """Varsayılan parametre tuzağını önlemek için None kalıbı kullanılır."""
+  if depo is None:
+    depo = []
+  depo.append(miktar)
+  return depo
