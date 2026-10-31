@@ -1,0 +1,25 @@
+import json
+
+def galaksi_kur(gezegenler, baglantilar, baslangic, **kwargs):
+    # Başlangıç gezegeni kontrolü
+    if baslangic not in gezegenler:
+        raise ValueError("Başlangıç gezegeni listede yok")
+    
+    # Yakıt verilmemişse varsayılan 50 olsun
+    yakit_miktari = kwargs.get("yakit", 50)
+    
+    return {
+        "gezegenler": gezegenler,
+        "baglantilar": baglantilar,
+        "konum": baslangic,
+        "yakit": yakit_miktari
+    }
+
+# Dosyadan okuma ve test etme kısmı da şöyle çok sade olabilir:
+if __name__ == "__main__":
+    with open("uzay_oyunu/galaksi.json", "r", encoding="utf-8") as f:
+        veri = json.load(f)
+    
+    g = galaksi_kur(**veri)
+    print(g["konum"], g["yakit"])
+

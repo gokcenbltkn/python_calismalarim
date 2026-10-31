@@ -1,7 +1,3 @@
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from uzay_oyunu import envanter_metni, hedef_menusu
 
 def test_envanter_metni():

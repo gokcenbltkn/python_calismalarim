@@ -24,3 +24,5 @@ def hedef_menusu(hedefler: list[str]) -> str:
 print(envanter_metni(True, False, True))
 
 print(hedef_menusu(["Gezegen 1", "Uzay İstasyonu", "Kara Delik"]))
+
+
